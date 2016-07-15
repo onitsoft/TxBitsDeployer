@@ -51,7 +51,7 @@
   notify:
     - restart nginx
 
-- get_url: url=https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.zip dest=/root/kibana.zip
+- get_url: url=https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.zip dest=/root/kibana.zip validate_certs=no
 - command: unzip kibana.zip chdir=/root creates=/root/kibana-3.1.0
 - command: cp -r /root/kibana-3.1.0 /opt/kibana creates=/opt/kibana
 - file: path=/opt/kibana state=directory recurse=true owner=root group=www-data mode=750

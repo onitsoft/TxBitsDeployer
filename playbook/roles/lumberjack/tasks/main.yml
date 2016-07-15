@@ -20,7 +20,7 @@
   args:
     chdir: /opt/lumberjack
     creates: /opt/lumberjack/build/bin/lumberjack.sh
-- command: cp -r /opt/lumberjack/build/bin/ /opt/lumberjack/bin creates=/opt/lumberjack/bin
+#- command: cp -r /opt/lumberjack/build/bin/ /opt/lumberjack/bin creates=/opt/lumberjack/bin
 
 - file: path=/opt/lumberjack recurse=true owner=root group=lumberjack
 - file: path=/opt/lumberjack/bin recurse=true owner=root group=lumberjack mode=750
